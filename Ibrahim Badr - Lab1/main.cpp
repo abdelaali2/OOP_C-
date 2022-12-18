@@ -52,6 +52,24 @@ public:
         real=temp1.getReal()-temp2.getReal();
         imag=temp1.getImag()-temp2.getImag();
     }
+
+    Complex add2(Complex comp1)
+    {
+        //receive: complex.add(comp1)
+        Complex result;
+        result.setReal(real+comp1.getReal());
+        result.setImag(imag+comp1.getImag());
+        return result;
+    }
+
+        Complex sub2(Complex comp1)
+    {
+        //receive: complex.add(comp1)
+        Complex result;
+        result.setReal(real-comp1.getReal());
+        result.setImag(imag-comp1.getImag());
+        return result;
+    }
 };
 
 
@@ -80,8 +98,16 @@ int main()
     resultComp.print();
     cout<<endl;
 
+    resultComp=myComp1.add2(myComp2);
+    resultComp.print();
+    cout<<endl;
+
     resultComp.sub(myComp1,myComp2);
     resultComp.print();
+
+    resultComp=myComp1.sub2(myComp2);
+    resultComp.print();
+    cout<<endl;
 
     return 0;
 }
