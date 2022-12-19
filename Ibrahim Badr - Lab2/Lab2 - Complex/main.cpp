@@ -91,6 +91,13 @@ public:
         return result;
     }
 
+    void setComplex(float re, float im)
+    {
+        real=re;
+        imag=im;
+    }
+
+
     ~Complex()
     {
         cout<<"The object will be terminated."<<endl;
@@ -108,8 +115,7 @@ int main()
     cout<<"Complex No. 1: Enter the Real part then Enter the Imaginary part"<<endl;
     cin>>rinp>>iinp;
 
-    myComp1.setReal(rinp);
-    myComp1.setImag(iinp);
+    myComp1.setComplex(rinp,iinp);
     myComp1.print();
     cout<<endl;
 
