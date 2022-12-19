@@ -12,7 +12,7 @@ Lab 1 Exercise:
 	4. cin>> and cout<< streams.
 	5. Dynamic allocation with "new" and "delete" operators.
 
-3. ImplementSwapfunction:
+3. Implement Swap function:
 	
 	1. Once call by value.
 	2. Once call by Address.
