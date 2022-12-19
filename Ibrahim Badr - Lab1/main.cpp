@@ -62,7 +62,7 @@ public:
         return result;
     }
 
-        Complex sub2(Complex comp1)
+    Complex sub2(Complex comp1)
     {
         //receive: complex.add(comp1)
         Complex result;
@@ -73,8 +73,15 @@ public:
 };
 
 
+void swap_value(int, int);
+
+void swap_reference(int &, int &);
+
+void swap_address(int *, int *);
+
 int main()
 {
+
     Complex myComp1, myComp2, resultComp;
     float rinp,iinp;
 
@@ -109,5 +116,43 @@ int main()
     resultComp.print();
     cout<<endl;
 
+    //swap functions
+
+    int a=5,b=7;
+    cout<<"No.1 is "<<a<<"\t"<<"No.2 is"<<b<<endl;
+
+    swap_value(a,b);
+
+    swap_reference(a,b);
+
+    swap_address(&a,&b);
+
     return 0;
+}
+
+void swap_value(int a, int b)
+{
+    cout<<endl<<"Swapping by Value"<<endl<<"No.1 is "<<a<<"\t"<<"No.2 is"<<b<<endl;
+    int temp =a;
+    a=b;
+    b=temp;
+    cout<<"No.1 is "<<a<<"\t"<<"No.2 is"<<b<<endl;
+}
+
+void swap_reference(int &a, int &b)
+{
+    cout<<endl<<"Swapping by Reference"<<endl<<"No.1 is "<<a<<"\t"<<"No.2 is"<<b<<endl;
+    int temp =a;
+    a=b;
+    b=temp;
+    cout<<"No.1 is "<<a<<"\t"<<"No.2 is"<<b<<endl;
+}
+
+void swap_address(int *a, int *b)
+{
+    cout<<endl<<"Swapping by address"<<endl<<"No.1 is "<<*a<<"\t"<<"No.2 is"<<*b<<endl;
+    int temp = *a;
+    *a=*b;
+    *b=temp;
+    cout<<"No.1 is "<<*a<<"\t"<<"No.2 is"<<*b<<endl;
 }
