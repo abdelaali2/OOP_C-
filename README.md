@@ -37,3 +37,15 @@ Lab 2 Exercise:
 	
 	1. Take stack size from user first
 	2. Show & handle these menu options
+	
+
+
+Lab 3 Exercise:
+
+1. Complete Stack Class
+	1. viewContent function once call by reference.
+	2. viewContent function once call by value and without copy constructor . . (to seethe extra destructor call).
+	3. viewContent function once call by value and with copy constructor.
+	(count objects and constructors and destructors calls)
+
+Note: You should Trace the code.
