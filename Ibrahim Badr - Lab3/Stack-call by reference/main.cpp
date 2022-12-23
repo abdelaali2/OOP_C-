@@ -9,16 +9,34 @@ class Stack
     int Size;
     static int counter; // Declare
 
+    friend void viewContent(Stack);
+
 
 public:
 
     Stack(int n)
     {
+        cout<<"Hello from the default constructor"<<endl;
         st=new int[n];
         Size=n;
         tos=0;
         counter++;
         cout<<"Stack Constructor: This is Stack object No. "<<counter<<endl;
+    }
+
+    Stack(Stack &z)
+    {
+        cout<<"Hello from the copy constructor."<<endl;
+        tos=z.tos;
+        Size=z.Size;
+        st=new int[Size];
+        for (int i=0;i<tos;i++)
+        {
+            st[i]=z.st[i];
+        }
+        counter++;
+        cout<<"Stack Constructor: This is Stack object No. "<<counter<<endl;
+
     }
 
     void push(int a)
@@ -83,6 +101,7 @@ public:
 
     bool ifexisits (int a)
     {
+        cout<<"ifexisits is here";
         for (int i=0; i<=Size; i++)
         {
             if (st[i]==a)
@@ -102,11 +121,19 @@ void menu(Stack &);
 int main()
 {
     int length;
-    // Bonus No.1: Create the stack with a user input size.
-    cout<<"Enter the size of the Stack"<<endl;
-    cin>>length;
-    Stack s1(length);
-    menu(s1);
+
+
+    Stack s1(5);
+
+    s1.push(5);
+    s1.push(10);
+    s1.push(15);
+    s1.push(20);
+    s1.push(25);
+
+    viewContent(s1);
+
+
     return 0;
 }
 
@@ -114,44 +141,23 @@ int main()
 //Bonus No.2: Menu
 
 
-void menu(Stack &s1)
+void viewContent (Stack x)
 {
-    int choice,User_input,cont,exit=0;
 
-    while (0==exit)
+    int top =x.tos;
+    while (0!=top)
     {
-        cout<<endl<<endl;
-        cout<<"Press 1 to Display the Stack"<<endl;
-        cout<<"Press 2 to Push into the Stack"<<endl;
-        cout<<"Press 3 to Pop from the Stack"<<endl;
-        cout<<"Press any key to exit"<<endl;
-
-        cin>>choice;
-
-        switch (choice)
-        {
-
-        case 1:
-            s1.print();
-
-            break;
-
-        case 2:
-            cout<<"Enter value"<<endl;
-            cin>>User_input;
-            s1.push(User_input);
-
-            break;
-        case 3:
-            cout<<"Enter the value you want to pop."<<endl;
-            cin>>User_input;
-            s1.pop(User_input);
-            break;
-        default:
-            exit=1;
-            break;
-        }
+        cout<<"Value No. "<<top<<" is :"<<x.st[top]<<endl;
+        top--;
     }
-    return;
+
 }
+
+
+
+
+
+
+
+
 
