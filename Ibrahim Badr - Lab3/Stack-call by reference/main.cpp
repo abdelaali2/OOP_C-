@@ -9,7 +9,7 @@ class Stack
     int Size;
     static int counter; // Declare
 
-    friend void viewContent(Stack);
+    friend void viewContent(Stack &);
 
 
 public:
@@ -138,10 +138,8 @@ int main()
 }
 
 
-//Bonus No.2: Menu
 
-
-void viewContent (Stack x)
+void viewContent (Stack &x)
 {
 
     int top =x.tos;
