@@ -46,6 +46,7 @@ Lab 3 Exercise:
 	1. viewContent function once call by reference.
 	2. viewContent function once call by value and without copy constructor . . (to seethe extra destructor call).
 	3. viewContent function once call by value and with copy constructor.
-	--count objects and constructors and destructors calls
+	
+	count objects and constructors and destructors calls
 
 Note: You should Trace the code.
