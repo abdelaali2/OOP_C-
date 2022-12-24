@@ -50,3 +50,28 @@ Lab 3 Exercise:
 	count objects and constructors and destructors calls
 
 Note: You should Trace the code.
+
+
+Lab 4 Exercise:
+
+
+1. Complete Stack Class:
+	1. = operator overload.
+2.Complete Complex Class for:
+
+	c3 = c1+c2
+	c3 = c1-c2
+	c3 = c1+5
+	c3 = c1-5
+	c3 = 5+c1
+	c3 = 5-c1
+	c1 == c2
+	c1 += c2
+	c1 -= c2
+	++c1
+	--c1
+	c1++
+	--c1
+	(float) c1
+	
+Note: You should Trace the code.
