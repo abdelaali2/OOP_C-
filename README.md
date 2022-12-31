@@ -101,3 +101,38 @@ Lab 5 Exercise:
 	2. Collections: Simple trials in the main( function to create object and array of objects from classes of (Line Rect,Circle
 
 Note: You should Trace the code.
+
+
+Lab 6 Exercise:
+	
+	1. Base, Derived, and SecondDerived [Test all cases at the main].
+	
+	2. Update picture application by add class Shape as a parent to lines , Rectangles and circles with color attribute.
+	
+Note: You should Trace the code.
+
+	
+Lab 7 Exercise:
+
+	1. Example of:
+		1. Base, Derived, and calculateSum().
+	
+	2. GeoShape Example:
+		1. Try with public inheritance (try to violate the square and circle constraints bycalling the inherited setter methods).
+		2. Try with protected inheritance not able to violate the square and circle constraints.
+		3. Add the new special setter functions to class square and circle
+
+Note: You should Trace the code.
+
+
+Lab 8 Exercise:
+
+	1. Continue the GeoShape Example:
+		1. Make the function "calculateArea()" a pure virtual function, and make necessary changes to other classes.
+		2. Write the standalone function sumOfAreas(~,~,~), which takes 3 parameters as pointers from type GeoShape.
+		3. Not able to create objects of the abstract class GeoShape.
+	
+	2. Stack class with Templates
+	
+Note: You should Trace the code.
+
